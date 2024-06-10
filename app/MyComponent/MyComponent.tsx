@@ -32,10 +32,6 @@ const MyComponent: React.FC<MyComponentProps> = ({ data }) => {
     );
   }, [searchTerm, data]);
 
-  useEffect(() => {
-    setDataSource(data);
-  }, [data]);
-
   const handleSelect = useCallback((item: Item) => {
     setSelectedItems((currentSelectedItems) =>
       currentSelectedItems.some((i) => i.id === item.id)
